@@ -135,13 +135,39 @@ internal class Program
         Console.WriteLine("==========================");
         Console.WriteLine();
 
-        Personagem personagem1 = new Personagem();
-        personagem1.Nome = "Sypha Belnades";
-        personagem1.Categoria = "Maga";
-        personagem1.Nivel = 85;
-        personagem1.Forca = 60;
-        personagem1.Agilidade = 75;
-        personagem1.Vida = 70;
+        Mago mago1 = new Mago();
+        mago1.Nome = "Sypha Belnades";
+        mago1.Nivel = 1;
+        mago1.Forca = 60;
+        mago1.Agilidade = 55;
+        mago1.Vida = 100;
+        mago1.Inteligencia = 87;
 
+        //int ataque = mago1.atacar();
+        //int defesa = mago1.defender();
+        //Console.WriteLine("Força de ataque " + ataque);
+        //Console.WriteLine("Força de defesa " + defesa);
+
+        Elfo elfo1 = new Elfo();
+        elfo1.Nome = "Alya";
+        elfo1.Nivel = 1;
+        elfo1.Forca = 56;
+        elfo1.Agilidade = 87;
+        elfo1.Vida = 100;
+        elfo1.Inteligencia = 70;
+
+        Cavalheiro cavalheiro1 = new Cavalheiro();
+        cavalheiro1.Nome = "Caska";
+        cavalheiro1.Nivel = 1;
+        cavalheiro1.Forca = 87;
+        cavalheiro1.Agilidade = 40;
+        cavalheiro1.Vida = 100;
+        cavalheiro1.Inteligencia = 70;
+
+        mago1.apresentar();
+        Console.WriteLine("--------");
+        elfo1.apresentar();
+        Console.WriteLine("-------");
+        mago1.batalhar(elfo1);
     }
 }
