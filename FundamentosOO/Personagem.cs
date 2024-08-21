@@ -22,7 +22,11 @@ namespace FundamentosOO
         public virtual void apresentar() { }
         public virtual void evoluir()
         {
-            int pontosEvolucao = 0;
+            this.Nivel += 2;
+            this.Forca *= 2;
+            this.Inteligencia *= 2;
+            this.Agilidade *= 2;
+            Console.WriteLine("O jogador " + this.Nome + "evoluiu para o nivel: " + this.Nivel + ". \nSeus novos valores são: \nAgilidade: " + this.Agilidade + "\nInteligencia: " + this.Inteligencia + "\nForça: " + this.Forca);
 
         }
         public virtual int atacar()
@@ -69,11 +73,13 @@ namespace FundamentosOO
                 {
                     Console.WriteLine("O Personagem " + p.Nome + " Venceu!");
                     vencedor = true;
+                    p.evoluir();
                 }
                 if (p.Vida <= 0)
                 {
                     Console.WriteLine("O personagem " + this.Nome + " Venceu!");
                     vencedor = true;
+                    this.evoluir();
                 }
             }
         }
